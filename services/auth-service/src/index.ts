@@ -24,6 +24,7 @@ app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Auth service is running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
 });
 
 export default app;

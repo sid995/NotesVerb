@@ -23,6 +23,15 @@ export function createServiceResponse(
   return new ServiceError(message, statusCode, code, details);
 }
 
+export function createServiceError(
+  message: string,
+  statusCode: number = 500,
+  code?: string,
+  details?: any
+): ServiceError {
+  return new ServiceError(message, statusCode, code, details);
+}
+
 export function createSuccessResponse<T>(
   data: T,
   message?: string
