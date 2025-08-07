@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { asyncHandler } from "@shared/middleware";
+import { asyncHandler } from "../../../shared/middleware";
 import { AuthService } from "./authService";
-import { createSuccessResponse } from "@shared/utils";
+import { createSuccessResponse } from "../../../shared/utils";
 
 const authService = new AuthService();
 

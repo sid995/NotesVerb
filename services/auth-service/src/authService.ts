@@ -1,8 +1,8 @@
 import jwt, { SignOptions } from "jsonwebtoken";
-import { AuthTokens } from "@shared/types";
+import { AuthTokens } from "../../../shared/types";
 import bcrypt from "bcryptjs";
 import prisma from "./database";
-import { createServiceResponse } from "@shared/utils";
+import { createServiceResponse } from "../../../shared/utils";
 import { StringValue } from "ms";
 
 export class AuthService {

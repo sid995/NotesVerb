@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
+import authRoutes from "./routes";
 
 dotenv.config();
 
@@ -13,6 +14,9 @@ app.use(helmet());
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
+
+// API Routes
+app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
   console.log(`Auth service is running on port ${PORT}`);
